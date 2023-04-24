@@ -20,10 +20,13 @@ int _printf(const char *format, ...)
 				case 'c':
 				va_arg(copy, int);
 				print_char(list, buffer, 0, 0, 0, sizeof(char));
+				break;
+
 				case 's':
 				str = va_arg(copy, char*);
 				print_string(list, buffer, 0, 0, 0, sizeof(str));
-
+				break;
+				
 				case '%':
 				write(1, "%", 1);
 			}
@@ -31,4 +34,5 @@ int _printf(const char *format, ...)
 		else
 			write(1, &format[i], 1);
 	}
+	return (0);
 }
