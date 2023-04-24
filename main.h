@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
@@ -110,6 +111,7 @@ char buffer[],
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
+int length(char *str);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
