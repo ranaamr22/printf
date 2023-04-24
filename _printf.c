@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main1.h"
 
 /**
  * _printf - prints anything
@@ -23,11 +23,11 @@ int _printf(const char *format, ...)
 			switch (format[++i])
 			{
 				case 'c':
-				print_char(list);
+				printchar(list);
 				break;
 
 				case 's':
-				print_string(list);
+				printstring(list);
 				break;
 
 				case '%':

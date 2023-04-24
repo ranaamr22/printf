@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main1.h"
 
 /**
  * length - get the length of strings

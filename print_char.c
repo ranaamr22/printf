@@ -1,14 +1,14 @@
-#include "main.h"
+#include "main1.h"
 
 /**
- * print_char - prints a char
+ * printchar - prints a char
  *
  * @types: list of arguments to caller function
  *
  * Return: Always 0
  */
 
-int print_char(va_list types)
+int printchar(va_list types)
 {
 	int c;
 

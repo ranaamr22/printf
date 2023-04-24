@@ -1,12 +1,12 @@
-#include "main.h"
+#include "main1.h"
 
 /**
- * print_string - print the strings
+ * printstring - print the strings
  * @types: take an argument of type va_list
  * Return: (0) (success)
  */
 
-int print_string(va_list types)
+int printstring(va_list types)
 {
 	char *str;
 	int i;
