@@ -1,6 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
-#include "main1.h"
+#include "main2.h"
 
 /**
  * main - Entry point
