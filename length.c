@@ -1,3 +1,5 @@
+#include "main.h"
+
 int length(char *str)
 {
 	int i = 0;

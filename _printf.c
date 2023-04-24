@@ -3,12 +3,9 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, len;
-	va_list list, copy;
-	char *str, *buffer;
+	va_list list;
 
 	len = length((char *)format);
-
-	buffer = malloc(sizeof(char) * len);
 
 	for (i = 0 ; i < len ; i++)
 	{
@@ -18,13 +15,11 @@ int _printf(const char *format, ...)
 			switch (format[++i])
 			{
 				case 'c':
-				va_arg(copy, int);
-				print_char(list, buffer, 0, 0, 0, sizeof(char));
+				print_char(list);
 				break;
 
 				case 's':
-				str = va_arg(copy, char*);
-				print_string(list, buffer, 0, 0, 0, sizeof(str));
+				print_string(list);
 				break;
 				
 				case '%':

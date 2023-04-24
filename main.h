@@ -47,10 +47,8 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 /****************** FUNCTIONS ******************/
 
 /* Funtions to print chars and strings */
-int print_char(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-int print_string(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int print_char(va_list types);
+int print_string(va_list types);
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
@@ -116,4 +114,4 @@ int length(char *str);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif /* MAIN_H */
+#endif
