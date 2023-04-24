@@ -15,7 +15,6 @@ int _printf(const char *format, ...)
 	char *str;
 
 	len = length((char *)format);
-
 	for (i = 0 ; i < len ; i++)
 	{
 		if (format[i] == '%')
@@ -27,15 +26,23 @@ int _printf(const char *format, ...)
 				printchar(list);
 				counter++;
 				break;
-
 				case 's':
 				str = va_arg(list, char *);
 				printstring(str);
 				counter += length(str);
 				break;
-
+				case 'i':
+				case 'd':
+				printint_d(list);
+				counter++;
+				break;
 				case '%':
 				write(1, "%", 1);
+				counter++;
+				break;
+				default:
+				write(1, &format[--i], 1);
+				write(1, &format[++i], 1);
 				counter++;
 			}
 		}
