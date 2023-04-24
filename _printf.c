@@ -5,13 +5,14 @@
  *
  * @format: string to print, including 0 or more specifiers
  *
- * Return: Always 0
+ * Return: number of characters printed
  */
 
 int _printf(const char *format, ...)
 {
-	int i = 0, len;
+	int i = 0, counter = 0, len;
 	va_list list;
+	char *str;
 
 	len = length((char *)format);
 
@@ -24,18 +25,26 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 				printchar(list);
+				counter++;
 				break;
 
 				case 's':
-				printstring(list);
+				str = va_arg(list, char *);
+				printstring(str);
+				counter += length(str);
 				break;
 
 				case '%':
 				write(1, "%", 1);
+				counter++;
 			}
 		}
 		else
+		{
 			write(1, &format[i], 1);
+			counter++;
+		}
 	}
-	return (0);
+	va_end(list);
+	return (counter);
 }

@@ -2,16 +2,13 @@
 
 /**
  * printstring - print the strings
- * @types: take an argument of type va_list
+ * @types: string to be printed
  * Return: (0) (success)
  */
 
-int printstring(va_list types)
+int printstring(char *str)
 {
-	char *str;
 	int i;
-
-	str = va_arg(types, char*);
 
 	for (i = 0; i < length(str); i++)
 	{
