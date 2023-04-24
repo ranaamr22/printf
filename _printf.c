@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * _printf - prints anything
+ *
+ * @format: string to print, including 0 or more specifiers
+ *
+ * Return: Always 0
+ */
+
 int _printf(const char *format, ...)
 {
 	int i = 0, len;
@@ -21,7 +29,7 @@ int _printf(const char *format, ...)
 				case 's':
 				print_string(list);
 				break;
-				
+
 				case '%':
 				write(1, "%", 1);
 			}
