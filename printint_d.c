@@ -46,6 +46,6 @@ int printint_d(va_list list)
 	{
 		write(1, &str[--i], 1);
 	}
-
+	free(str);
 	return (digits_num);
 }
