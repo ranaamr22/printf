@@ -14,7 +14,7 @@ int length(char *str);
 int printchar(va_list list);
 int printstring(va_list list);
 int printint_d(va_list list);
-int printhex(unsigned long int num);
 int printadd(va_list list);
+int printhex(unsigned long int num);
 
 #endif
