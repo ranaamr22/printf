@@ -8,8 +8,8 @@
 int printadd(va_list list)
 {
 	unsigned long int a;
-	void *add;
 	int size;
+	void *add;
 
 	add = va_arg(list, void*);
 	a = (unsigned long int)add;
