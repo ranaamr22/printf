@@ -47,6 +47,11 @@ int _printf(const char *format, ...)
 				counter++;
 				break;
 
+				case 'p':
+				n1=printadd(list);
+				counter += n1;
+				break;
+
 				default:
 				write(1, &format[--i], 1);
 				write(1, &format[++i], 1);
