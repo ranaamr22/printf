@@ -1,7 +1,7 @@
 #include "main2.h"
 
 /**
- * _printf - prints anything
+ * _printf - prints everything
  *
  * @format: string to be  printed, including 0 or  specifiers
  *
