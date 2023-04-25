@@ -2,18 +2,23 @@
 
 /**
  * printstring - print the strings
- * @types: string to be printed
- * Return: (0) (success)
+ *
+ * @list: va_list type
+ *
+ * Return: length of the string
  */
 
-int printstring(char *str)
+int printstring(va_list list)
 {
 	int i;
+	char *str;
+
+	str = va_arg(list, char*);
 
 	for (i = 0; i < length(str); i++)
 	{
 		write(1, &str[i], 1);
 	}
 
-	return (0);
+	return (length(str));
 }

@@ -3,24 +3,24 @@
 /**
  * printint_d - prints an int
  *
- * @type: va_list variable
+ * @list va_list variable
  *
- * Return: Always 0
+ * Return: number of digits printed
  */
 
-int printint_d(va_list type)
+int printint_d(va_list list)
 {
 	int n;
 	int tmp;
 	char *str;
 	int digits_num = 0, i = 0;
 
-	n = va_arg(type, int);
+	n = va_arg(list, int);
 	
 	if (n == 0)
 	{
 		write(1, "0", 1);
-		return (0);
+		return (1);
 	}
 
 	if (n < 0)
@@ -47,5 +47,5 @@ int printint_d(va_list type)
 		write(1, &str[--i], 1);
 	}
 
-	return (0);
+	return (digits_num);
 }

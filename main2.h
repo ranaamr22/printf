@@ -8,8 +8,8 @@
 
 int _printf(const char *format, ...);
 int length(char *str);
-int printchar(va_list types);
-int printstring(char *str);
-int printint_d(va_list type);
+int printchar(va_list list);
+int printstring(va_list list);
+int printint_d(va_list list);
 
 #endif
