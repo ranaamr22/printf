@@ -3,7 +3,7 @@
 /**
  * _printf - prints anything
  *
- * @format: string to print, including 0 or more specifiers
+ * @format: string to be  printed, including 0 or  specifiers
  *
  * Return: number of characters printed
  */
