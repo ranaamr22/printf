@@ -10,16 +10,42 @@
 
 int printint_d(va_list type)
 {
-	int x;
-	char digit;
+	int n;
+	int tmp;
+	char *str;
+	int digits_num = 0, i = 0;
 
-	x = va_arg(type, int);
-
-	while(x > 0)
+	n = va_arg(type, int);
+	
+	if (n == 0)
 	{
-		digit = (x % 10) + '0';
-		x /= 10;
-		write(1, &digit, 1);
+		write(1, "0", 1);
+		return (0);
 	}
+
+	if (n < 0)
+	{
+		write(1, "-", 1);
+		n = -n;
+	}
+
+	while (tmp > 0)
+	{
+		digits_num++;
+		tmp /= 10;
+	}
+	str = malloc((sizeof(char) * digits_num) + 1);
+
+	while (n > 0)
+	{
+		str[i++] = (n % 10) + '0';
+		n /= 10;
+	}
+
+	while (i > 0)
+	{
+		write(1, &str[--i], 1);
+	}
+
 	return (0);
 }
