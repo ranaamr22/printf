@@ -10,14 +10,14 @@
 
 int printint_d(int n)
 {
-	int tmp;
+	int tmp = n;
 	char *str;
 	int digits_num = 0, i = 0;
 	
 	if (n == 0)
 	{
 		write(1, "0", 1);
-		return (1);
+		return 1;
 	}
 
 	if (n < 0)
@@ -32,8 +32,8 @@ int printint_d(int n)
 		digits_num++;
 		tmp /= 10;
 	}
-	str = malloc((sizeof(char) * digits_num) + 1);
-
+	
+	str = malloc(digits_num + 1);
 	while (n > 0)
 	{
 		str[i++] = (n % 10) + '0';
@@ -44,8 +44,9 @@ int printint_d(int n)
 	{
 		write(1, &str[--i], 1);
 	}
+	
 	free(str);
-	return (digits_num);
+	return digits_num;
 }
 
 /**
