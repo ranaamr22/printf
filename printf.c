@@ -52,6 +52,15 @@ int _printf(const char *format, ...)
 				counter += n1;
 				break;
 
+				case 'u':
+				n1 = printuint(list);
+                                counter += n1;
+                                break;
+
+				case 'X':
+				n1=printadd(list);
+                                counter += n1;
+
 				default:
 				write(1, &format[--i], 1);
 				write(1, &format[++i], 1);

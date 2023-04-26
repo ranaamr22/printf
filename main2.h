@@ -16,5 +16,6 @@ int printstring(va_list list);
 int printint_d(va_list list);
 int printadd(va_list list);
 int printhex(unsigned long int num);
+int printuint(va_list list);
 
 #endif
