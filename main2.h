@@ -13,9 +13,10 @@ int _printf(const char *format, ...);
 int length(char *str);
 int printchar(va_list list);
 int printstring(va_list list);
-int printint_d(va_list list);
+int printint_d(int n);
 int printadd(va_list list);
 int printhex(unsigned long int num);
 int printuint(va_list list);
+unsigned int printbinary(va_list list);
 
 #endif

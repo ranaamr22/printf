@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, counter = 0, len, n1;
+	int i = 0, counter = 0, len, n1, num;
 	va_list list;
 	va_start(list, format);
 
@@ -38,7 +38,8 @@ int _printf(const char *format, ...)
 
 				case 'i':
 				case 'd':
-				n1 = printint_d(list);
+				num = va_arg(list, int);
+				n1 = printint_d(num);
 				counter += n1;
 				break;
 
@@ -56,6 +57,11 @@ int _printf(const char *format, ...)
 				n1 = printuint(list);
                                 counter += n1;
                                 break;
+
+				case 'b':
+				n1 = printbinary(list);
+				counter += n1;
+				break;
 
 				default:
 				write(1, &format[--i], 1);
